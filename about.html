@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — MoreD Technology</title>
+    <meta name="description" content="Learn about MoreD Technology — More Diversity, More Digitalization, More Dynamism. Connecting technologies, transforming tomorrow.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/solution.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #eff6ff 0%, #f0f4f8 50%, #f5f3ff 100%);
+        }
+
+        .about-hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .about-hero-bg .hero-gradient {
+            opacity: 0.1;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 120px 24px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .about-hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        /* MoreD Meaning Section */
+        .meaning-section {
+            background: var(--bg-secondary);
+            padding: 100px 0;
+        }
+
+        .meaning-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .meaning-card {
+            text-align: center;
+            padding: 48px 32px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .meaning-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .meaning-card:hover {
+            background: rgba(37, 99, 235, 0.04);
+            border-color: rgba(37, 99, 235, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .meaning-card:hover::before {
+            opacity: 1;
+        }
+
+        .meaning-letter {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--gradient-2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .meaning-card h3 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .meaning-card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Company Info Section */
+        .company-section {
+            background: var(--bg-primary);
+            padding: 100px 0;
+        }
+
+        .company-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .company-content p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .company-locations {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px 32px;
+            margin-top: 40px;
+        }
+
+        .location-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .location-tag svg {
+            width: 16px;
+            height: 16px;
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .meaning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meaning-card {
+                padding: 36px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#3b82f6"/>
+                    <path d="M10 28V12l8 10 8-10v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">MoreD</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-item">
+                    <a href="index.html#solutions" class="nav-link">Solutions <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-group-title">AI + Education</div>
+                        <a href="solutions/smart-proctoring.html" class="dropdown-link">Smart Proctoring</a>
+                        <a href="solutions/ai-tutor.html" class="dropdown-link">AI Tutor</a>
+                        <a href="solutions/ai-curriculum.html" class="dropdown-link">AI Curriculum</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-group-title">Smart Mobility</div>
+                        <a href="solutions/ride-hailing.html" class="dropdown-link">Ride-Hailing Platform <span class="badge-soon">Coming Soon</span></a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-group-title">Online Travel</div>
+                        <a href="solutions/business-travel.html" class="dropdown-link">Business Travel Platform <span class="badge-soon">Coming Soon</span></a>
+                    </div>
+                </div>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <div class="mobile-nav-item">
+            <button class="mobile-nav-toggle" id="mobile-solutions-toggle">Solutions <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="mobile-submenu" id="mobile-submenu">
+                <span class="mobile-submenu-title">AI + Education</span>
+                <a href="solutions/smart-proctoring.html">Smart Proctoring</a>
+                <a href="solutions/ai-tutor.html">AI Tutor</a>
+                <a href="solutions/ai-curriculum.html">AI Curriculum</a>
+                <span class="mobile-submenu-title">Smart Mobility</span>
+                <a href="solutions/ride-hailing.html">Ride-Hailing Platform</a>
+                <span class="mobile-submenu-title">Online Travel</span>
+                <a href="solutions/business-travel.html">Business Travel Platform</a>
+            </div>
+        </div>
+        <a href="news.html" class="mobile-nav-link">News</a>
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="about-hero">
+        <div class="about-hero-bg">
+            <div class="hero-gradient hero-gradient-1"></div>
+            <div class="hero-gradient hero-gradient-2"></div>
+        </div>
+        <div class="about-hero-content">
+            <h1 class="about-hero-title fade-in">About MoreD Technology</h1>
+            <p class="about-hero-subtitle fade-in">Connecting Technologies, Transforming Tomorrow</p>
+        </div>
+    </section>
+
+    <!-- MoreD Meaning -->
+    <section class="meaning-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag fade-in">What MoreD Means</p>
+                <h2 class="section-title fade-in">The Three Pillars of<br>Our Identity</h2>
+            </div>
+            <div class="meaning-grid">
+                <div class="meaning-card fade-in">
+                    <div class="meaning-letter">D</div>
+                    <h3>More Diversity</h3>
+                    <p>Diversity is the cornerstone of innovation. We embrace multiple perspectives, cultures, and ideas to create solutions that truly serve a global audience. Different viewpoints drive breakthrough thinking.</p>
+                </div>
+                <div class="meaning-card fade-in">
+                    <div class="meaning-letter">D</div>
+                    <h3>More Digitalization</h3>
+                    <p>Harnessing cutting-edge digital technologies to drive transformation across industries. From AI-powered education to smart mobility, we turn complex challenges into seamless digital experiences.</p>
+                </div>
+                <div class="meaning-card fade-in">
+                    <div class="meaning-letter">D</div>
+                    <h3>More Dynamism</h3>
+                    <p>Thriving on agility, seizing opportunities, and continuously creating value. In a fast-changing world, we stay nimble and responsive — adapting quickly to deliver results that matter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="company-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag fade-in">Who We Are</p>
+                <h2 class="section-title fade-in">Technology-Driven,<br>Digital-Centered Excellence</h2>
+            </div>
+            <div class="company-content">
+                <p class="fade-in">Founded in 2020, MoreD Technology is on a mission to accelerate digital transformation across industries. Through AI and innovative technologies, we empower education, mobility, and business travel sectors to operate smarter, faster, and more efficiently.</p>
+                <p class="fade-in">"Our success is measured by our clients' achievements." We work closely with partners across the globe, building scalable solutions that create lasting impact.</p>
+                <div class="company-locations fade-in">
+                    <span class="location-tag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        South Africa
+                    </span>
+                    <span class="location-tag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Mainland China
+                    </span>
+                    <span class="location-tag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Hong Kong
+                    </span>
+                    <span class="location-tag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Malaysia
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section about" id="values">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag fade-in">Core Values</p>
+                <h2 class="section-title fade-in">What Drives Us Forward</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-card fade-in">
+                        <div class="about-card-icon">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="20" stroke="#3b82f6" stroke-width="2"/>
+                                <path d="M24 14v10l7 4" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="24" r="3" fill="#3b82f6"/>
+                                <path d="M16 8l2 4M32 8l-2 4M10 18l4 1M38 18l-4 1" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3>Intelligence</h3>
+                        <p>AI-Powered</p>
+                    </div>
+                    <div class="about-card fade-in">
+                        <div class="about-card-icon">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 6l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/>
+                                <circle cx="24" cy="24" r="4" stroke="#3b82f6" stroke-width="1.5"/>
+                                <path d="M24 34v8M16 36l-4 6M32 36l4 6" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>Creative Solutions</p>
+                    </div>
+                    <div class="about-card fade-in">
+                        <div class="about-card-icon">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="16" stroke="#3b82f6" stroke-width="2"/>
+                                <ellipse cx="24" cy="24" rx="16" ry="6" stroke="#3b82f6" stroke-width="1.5"/>
+                                <ellipse cx="24" cy="24" rx="6" ry="16" stroke="#3b82f6" stroke-width="1.5"/>
+                                <circle cx="24" cy="24" r="2" fill="#3b82f6"/>
+                            </svg>
+                        </div>
+                        <h3>Scalability</h3>
+                        <p>Global Scale</p>
+                    </div>
+                    <div class="about-card fade-in">
+                        <div class="about-card-icon">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 38L18 20l8 10 6-14 8 22" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="18" cy="20" r="3" stroke="#3b82f6" stroke-width="1.5"/>
+                                <circle cx="26" cy="30" r="3" stroke="#3b82f6" stroke-width="1.5"/>
+                                <circle cx="32" cy="16" r="3" stroke="#3b82f6" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3>Transformation</h3>
+                        <p>Digital Evolution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="section vision">
+        <div class="container">
+            <div class="vision-content fade-in">
+                <p class="section-tag">Our Vision</p>
+                <blockquote class="vision-quote">
+                    "We envision a world where technology seamlessly <strong>transforms industries</strong>, where <strong>AI-driven solutions</strong> promote efficiency, and where <strong>digital innovation</strong> creates new opportunities for businesses of all sizes."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag fade-in">Get in Touch</p>
+                <h2 class="section-title fade-in">Let's Build the Future Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@moredtech.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>To be updated</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4l11.733 16H20L8.267 4H4zM4 20l6.768-6.768M13.232 10.768L20 4"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form fade-in" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="8" fill="#3b82f6"/>
+                            <path d="M10 28V12l8 10 8-10v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="logo-text">MoreD</span>
+                    </a>
+                    <p class="footer-tagline">Connecting Technologies, Transforming Tomorrow</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <a href="solutions/smart-proctoring.html">Smart Proctoring</a>
+                    <a href="solutions/ai-tutor.html">AI Tutor</a>
+                    <a href="solutions/ai-curriculum.html">AI Curriculum</a>
+                    <a href="solutions/ride-hailing.html">Smart Mobility</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MoreD Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

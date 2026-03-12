@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News — MoreD Technology</title>
+    <meta name="description" content="Latest news and updates from MoreD Technology — partnerships, product launches, and industry milestones.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/solution.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#3b82f6"/>
+                    <path d="M10 28V12l8 10 8-10v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">MoreD</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-item">
+                    <a href="index.html#solutions" class="nav-link">Solutions <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-group-title">AI + Education</div>
+                        <a href="solutions/smart-proctoring.html" class="dropdown-link">Smart Proctoring</a>
+                        <a href="solutions/ai-tutor.html" class="dropdown-link">AI Tutor</a>
+                        <a href="solutions/ai-curriculum.html" class="dropdown-link">AI Curriculum</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-group-title">Smart Mobility</div>
+                        <a href="solutions/ride-hailing.html" class="dropdown-link">Ride-Hailing Platform <span class="badge-soon">Coming Soon</span></a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-group-title">Online Travel</div>
+                        <a href="solutions/business-travel.html" class="dropdown-link">Business Travel Platform <span class="badge-soon">Coming Soon</span></a>
+                    </div>
+                </div>
+                <a href="news.html" class="nav-link active">News</a>
+                <a href="about.html" class="nav-link">About Us</a>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <div class="mobile-nav-item">
+            <button class="mobile-nav-toggle" id="mobile-solutions-toggle">Solutions <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="mobile-submenu" id="mobile-submenu">
+                <span class="mobile-submenu-title">AI + Education</span>
+                <a href="solutions/smart-proctoring.html">Smart Proctoring</a>
+                <a href="solutions/ai-tutor.html">AI Tutor</a>
+                <a href="solutions/ai-curriculum.html">AI Curriculum</a>
+                <span class="mobile-submenu-title">Smart Mobility</span>
+                <a href="solutions/ride-hailing.html">Ride-Hailing Platform</a>
+                <span class="mobile-submenu-title">Online Travel</span>
+                <a href="solutions/business-travel.html">Business Travel Platform</a>
+            </div>
+        </div>
+        <a href="news.html" class="mobile-nav-link">News</a>
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+    </div>
+
+    <!-- News Hero -->
+    <section class="solution-hero" style="min-height: 50vh;">
+        <div class="solution-hero-bg">
+            <div class="hero-gradient hero-gradient-1"></div>
+            <div class="hero-gradient hero-gradient-2"></div>
+        </div>
+        <div class="container solution-hero-content">
+            <h1 class="solution-hero-title fade-in">News & Updates</h1>
+            <p class="solution-hero-subtitle fade-in">Stay up to date with the latest from MoreD Technology</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="gallery-filters fade-in">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="education">Education</button>
+                <button class="gallery-filter-btn" data-filter="mobility">Mobility</button>
+                <button class="gallery-filter-btn" data-filter="travel">Travel</button>
+                <button class="gallery-filter-btn" data-filter="partnership">Partnership</button>
+            </div>
+
+            <!-- Timeline Gallery -->
+            <div class="gallery-timeline">
+                <!-- Item 1 -->
+                <article class="gallery-item fade-in" data-category="education partnership">
+                    <div class="gallery-date">
+                        <span class="gallery-date-day">07</span>
+                        <span class="gallery-date-month">May</span>
+                        <span class="gallery-date-year">2025</span>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">CSET-MoreD AI Assessment System Partnership</h3>
+                        <div class="gallery-images">
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                        </div>
+                        <p class="gallery-desc">MoreD Technology partners with UNISA's College of Science, Engineering and Technology (CSET) to develop an AI-powered integrated assessment system. The platform features true offline exams, six-layer AI anti-cheating, and multi-format question support — starting with a 3,000-tablet pilot deployment.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">AI</span>
+                            <span class="gallery-tag">Education</span>
+                            <span class="gallery-tag">UNISA</span>
+                            <span class="gallery-tag">Assessment</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 2 -->
+                <article class="gallery-item fade-in" data-category="travel partnership">
+                    <div class="gallery-date">
+                        <span class="gallery-date-day">04</span>
+                        <span class="gallery-date-month">Nov</span>
+                        <span class="gallery-date-year">2025</span>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">SinoBridge Travel Platform Launch</h3>
+                        <div class="gallery-images">
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                        </div>
+                        <p class="gallery-desc">SinoBridge Travel launches South Africa's first AI-powered corporate travel management platform, anchored by UNISA's R200M annual travel spend. The platform connects directly to Amadeus, Sabre, and Travelport GDS systems, targeting 40% cost reduction on bookings and R10M+ annual savings in agent fees.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Travel</span>
+                            <span class="gallery-tag">Corporate</span>
+                            <span class="gallery-tag">UNISA</span>
+                            <span class="gallery-tag">AI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 3 -->
+                <article class="gallery-item fade-in" data-category="mobility partnership">
+                    <div class="gallery-date">
+                        <span class="gallery-date-day">15</span>
+                        <span class="gallery-date-month">Jan</span>
+                        <span class="gallery-date-year">2026</span>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Strategic EV Mobility Partnership with ACSA</h3>
+                        <div class="gallery-images">
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                        </div>
+                        <p class="gallery-desc">MoreD Technology announces a strategic partnership with Airports Company South Africa (ACSA) to launch the country's first EV ride-hailing service at major airports. The three-pillar strategy encompasses an EV ride-hailing platform, solar-powered charging infrastructure, and an integrated online travel agency.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">EV</span>
+                            <span class="gallery-tag">Mobility</span>
+                            <span class="gallery-tag">ACSA</span>
+                            <span class="gallery-tag">Infrastructure</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 4 -->
+                <article class="gallery-item fade-in" data-category="mobility partnership">
+                    <div class="gallery-date">
+                        <span class="gallery-date-day">20</span>
+                        <span class="gallery-date-month">Feb</span>
+                        <span class="gallery-date-year">2026</span>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Geely South Africa Vehicle Operations</h3>
+                        <div class="gallery-images">
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                            <div class="gallery-image-placeholder">Image Coming Soon</div>
+                        </div>
+                        <p class="gallery-desc">MoreD Technology secures a direct OEM partnership with Geely Auto for custom-specification electric vehicles tailored to the South African ride-hailing market. The partnership covers vehicle supply, maintenance support, and technology integration for the EV fleet scaling from 500 to 10,000 vehicles.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Geely</span>
+                            <span class="gallery-tag">EV</span>
+                            <span class="gallery-tag">Partnership</span>
+                            <span class="gallery-tag">Manufacturing</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="8" fill="#3b82f6"/>
+                            <path d="M10 28V12l8 10 8-10v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="logo-text">MoreD</span>
+                    </a>
+                    <p class="footer-tagline">Connecting Technologies, Transforming Tomorrow</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <a href="solutions/smart-proctoring.html">Smart Proctoring</a>
+                    <a href="solutions/ai-tutor.html">AI Tutor</a>
+                    <a href="solutions/ai-curriculum.html">AI Curriculum</a>
+                    <a href="solutions/ride-hailing.html">Smart Mobility</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MoreD Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

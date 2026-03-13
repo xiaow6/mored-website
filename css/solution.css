@@ -580,40 +580,153 @@
     .pillars-grid {
         grid-template-columns: 1fr;
     }
+
+    .gallery-item {
+        grid-template-columns: 160px 1fr;
+    }
+
+    .gallery-date-day {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 768px) {
     .solution-hero {
-        padding: 120px 0 72px;
+        padding: 110px 0 60px;
         min-height: auto;
+    }
+
+    .solution-hero-title {
+        font-size: clamp(28px, 7vw, 48px);
+    }
+
+    .solution-hero-subtitle {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .solution-breadcrumb {
+        margin-bottom: 16px;
+        font-size: 13px;
     }
 
     .overview-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 36px;
+    }
+
+    .overview-title {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+
+    .overview-main p {
+        font-size: 15px;
+    }
+
+    .overview-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 24px 16px;
+    }
+
+    .stat-number {
+        font-size: 26px;
+    }
+
+    .stat-label {
+        font-size: 12px;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 28px 24px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+    }
+
+    .pillar-card {
+        padding: 28px 24px;
+    }
+
+    .pillar-number {
+        font-size: 36px;
+    }
+
+    .pillar-title {
+        font-size: 18px;
+    }
+
+    .pillar-features li {
+        font-size: 13px;
+    }
+
+    .partners-grid {
+        gap: 10px;
+    }
+
+    .partner-item {
+        padding: 14px 24px;
+        font-size: 14px;
     }
 
     .process-steps {
         flex-direction: column;
         align-items: center;
+        gap: 0;
     }
 
     .process-step {
         max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .process-step-number {
+        font-size: 36px;
+    }
+
+    .process-step h3 {
+        font-size: 16px;
     }
 
     .process-step-connector {
         width: 2px;
-        height: 40px;
+        height: 32px;
         margin: 0;
     }
 
     .cta-box {
-        padding: 48px 24px;
+        padding: 40px 20px;
+    }
+
+    .cta-box h2 {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+
+    .cta-box p {
+        font-size: 14px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
     }
 
     /* Gallery responsive */
@@ -623,16 +736,88 @@
 
     .gallery-date {
         flex-direction: row;
-        padding: 16px 24px;
+        padding: 14px 20px;
         gap: 8px;
+        align-items: baseline;
     }
 
     .gallery-date-day {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .gallery-date-month {
-        font-size: 14px;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .gallery-date-year {
+        font-size: 13px;
+    }
+
+    .gallery-images {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .gallery-content {
+        padding: 20px;
+    }
+
+    .gallery-title {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .gallery-desc {
+        font-size: 13px;
+    }
+
+    .gallery-filters {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .solution-hero {
+        padding: 100px 0 48px;
+    }
+
+    .solution-hero-badge {
+        font-size: 11px;
+        padding: 4px 12px;
+    }
+
+    .overview-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 20px 12px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+
+    .feature-card {
+        padding: 24px 20px;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 16px;
+    }
+
+    .gallery-filters {
+        gap: 6px;
+        margin-bottom: 24px;
+    }
+
+    .gallery-filter-btn {
+        padding: 6px 14px;
+        font-size: 12px;
     }
 
     .gallery-images {
@@ -640,25 +825,20 @@
     }
 
     .gallery-content {
-        padding: 24px;
+        padding: 16px;
     }
 
-    .gallery-title {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .overview-stats {
-        grid-template-columns: 1fr;
+    .gallery-tag {
+        font-size: 11px;
+        padding: 3px 10px;
     }
 
-    .gallery-filters {
-        gap: 8px;
+    .cta-box {
+        padding: 32px 16px;
     }
 
-    .gallery-filter-btn {
-        padding: 6px 16px;
+    .partner-item {
+        padding: 12px 18px;
         font-size: 13px;
     }
 }

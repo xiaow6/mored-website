@@ -174,7 +174,119 @@
             color: var(--accent);
         }
 
+        /* Founder Section */
+        .founder-card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .founder-photo {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .founder-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .founder-info {
+            padding: 40px;
+        }
+
+        .founder-name {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .founder-role {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .founder-bio {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .founder-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .founder-highlight {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .founder-highlight-icon {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            background: rgba(59, 130, 246, 0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px;
+            margin-top: 2px;
+        }
+
+        .founder-highlight-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .founder-highlight strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .founder-highlight span {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
         @media (max-width: 768px) {
+            .founder-card {
+                grid-template-columns: 1fr;
+            }
+
+            .founder-photo {
+                max-height: 320px;
+            }
+
+            .founder-info {
+                padding: 28px 24px;
+            }
+
+            .founder-name {
+                font-size: 24px;
+            }
+
+            .founder-bio {
+                font-size: 14px;
+            }
+
             .about-hero-content {
                 padding: 100px 20px 48px;
             }
@@ -359,6 +471,73 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         Malaysia
                     </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder -->
+    <section class="section founder-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag fade-in">Leadership</p>
+                <h2 class="section-title fade-in">Meet Our Founder</h2>
+            </div>
+            <div class="founder-card fade-in">
+                <div class="founder-photo">
+                    <img src="assets/shawn.jpg" alt="Shawn Xiao Wang — Founder & CEO of MoreD Technology">
+                </div>
+                <div class="founder-info">
+                    <h3 class="founder-name">Shawn Xiao Wang</h3>
+                    <p class="founder-role">Founder & CEO, MoreD Intelligent Technology</p>
+                    <p class="founder-bio">Shawn is an AI and IoT technology expert who doesn't just teach theory — he builds and deploys AI-powered solutions for real businesses. From automating mining operations in South Africa to powering China's largest unmanned self-study room chain, he brings a unique blend of deep technical expertise and hands-on entrepreneurship.</p>
+                    <div class="founder-highlights">
+                        <div class="founder-highlight">
+                            <div class="founder-highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+                            </div>
+                            <div>
+                                <strong>M.S. in EE & Computer Science</strong>
+                                <span>University of California, Irvine</span>
+                            </div>
+                        </div>
+                        <div class="founder-highlight">
+                            <div class="founder-highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z" opacity="0.5"/><circle cx="12" cy="12" r="1" fill="#3b82f6"/></svg>
+                            </div>
+                            <div>
+                                <strong>AI & IoT Technology Expert</strong>
+                                <span>Applied AI, intelligent systems, and automation</span>
+                            </div>
+                        </div>
+                        <div class="founder-highlight">
+                            <div class="founder-highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10A15 15 0 0112 2z"/></svg>
+                            </div>
+                            <div>
+                                <strong>South Africa Critical Skills Talent</strong>
+                                <span>Recognised under SA's critical skills visa programme</span>
+                            </div>
+                        </div>
+                        <div class="founder-highlight">
+                            <div class="founder-highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div>
+                                <strong>Founder, WangZhiZhi Study Rooms</strong>
+                                <span>China's #1 unmanned 24-hour self-study room chain</span>
+                            </div>
+                        </div>
+                        <div class="founder-highlight">
+                            <div class="founder-highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Cross-Industry Problem Solver</strong>
+                                <span>AI solutions for mining, universities, banks, and retail across China & Southern Africa</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

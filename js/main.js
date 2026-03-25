@@ -133,23 +133,37 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const name = this.querySelector('#name').value;
-    const email = this.querySelector('#email').value;
-    const subject = this.querySelector('#subject').value || 'Website Inquiry';
-    const message = this.querySelector('#message').value;
-
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    const mailto = `mailto:x@mored.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-
     const btn = this.querySelector('button[type="submit"]');
-    btn.textContent = 'Opening Email...';
-    btn.style.background = '#10b981';
-    setTimeout(() => {
-        btn.textContent = 'Send Message';
-        btn.style.background = '';
-        this.reset();
-    }, 3000);
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    fetch('https://formspree.io/f/mlgoejzn', {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            btn.textContent = 'Message Sent!';
+            btn.style.background = '#10b981';
+            this.reset();
+        } else {
+            btn.textContent = 'Failed, try again';
+            btn.style.background = '#ef4444';
+        }
+        setTimeout(() => {
+            btn.textContent = 'Send Message';
+            btn.style.background = '';
+            btn.disabled = false;
+        }, 3000);
+    }).catch(() => {
+        btn.textContent = 'Failed, try again';
+        btn.style.background = '#ef4444';
+        setTimeout(() => {
+            btn.textContent = 'Send Message';
+            btn.style.background = '';
+            btn.disabled = false;
+        }, 3000);
+    });
 });
 
 // ===========================

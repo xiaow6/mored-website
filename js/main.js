@@ -133,17 +133,21 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
+    const name = this.querySelector('#name').value;
+    const email = this.querySelector('#email').value;
+    const subject = this.querySelector('#subject').value || 'Website Inquiry';
+    const message = this.querySelector('#message').value;
+
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const mailto = `mailto:x@mored.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
     const btn = this.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-
-    btn.textContent = 'Message Sent!';
+    btn.textContent = 'Opening Email...';
     btn.style.background = '#10b981';
-    btn.disabled = true;
-
     setTimeout(() => {
-        btn.textContent = originalText;
+        btn.textContent = 'Send Message';
         btn.style.background = '';
-        btn.disabled = false;
         this.reset();
     }, 3000);
 });

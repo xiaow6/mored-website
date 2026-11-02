@@ -1164,6 +1164,21 @@ img {
     color: #64748b;
 }
 
+.footer-icp {
+    margin-top: 8px;
+}
+
+.footer-icp a {
+    color: #94a3b8;
+}
+
+.footer-icp a:hover,
+.footer-icp a:focus-visible {
+    color: #60a5fa;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 /* ===========================
    Animations (Fade In)
    =========================== */
